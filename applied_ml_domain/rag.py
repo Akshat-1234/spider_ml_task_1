@@ -16,7 +16,7 @@ embeddings = HuggingFaceEmbeddings(
 )
 #Load FAISS
 vectorstore = FAISS.load_local(
-    "applied_ml_domain/vectorstore",
+    "vectorstore",
     embeddings,
     allow_dangerous_deserialization=True #To prevent hacking
 )

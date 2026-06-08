@@ -308,14 +308,13 @@ GEMINI_API_KEY=YOUR_API_KEY_HERE
 ### Build Vector Database
 
 ```bash
-python build_vectorstore.py
+python applied_ml_domain/build_vectorstore.py
 ```
 
 ### Launch Chatbot
 
 ```bash
-streamlit run applied_ml_domain/app.py
-```
+streamlit run applied_ml_domain/app.py```
 
 ## Author
 

@@ -15,7 +15,7 @@ all_documents = []
 #Then we extract text from each page and combine them to get full text
 #Then we add the text of each pdf to all_documents along with file name
 #We add file name because we are going to need to display which paper was the content fetched from while answering 
-pdf_dir = "./applied_ml_domain/papers"
+pdf_dir = "./papers"
 
 
 for file in os.listdir(pdf_dir):
@@ -77,7 +77,7 @@ vectorstore = FAISS.from_documents(
 )
 #creating vectorstore folder to save vectors
 vectorstore.save_local(
-    "applied_ml_domain/vectorstore"
+    "vectorstore"
 )
 
 #Verification of working of the code using a normal question
