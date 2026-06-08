@@ -5,3 +5,6 @@ env/
 .env
 __pycache__/
 .env/
+
+base_task/data/
+applied_ml_domain/vectorstore/
