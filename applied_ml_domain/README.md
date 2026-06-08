@@ -314,7 +314,7 @@ python build_vectorstore.py
 ### Launch Chatbot
 
 ```bash
-streamlit run app.py
+streamlit run applied_ml_domain/app.py
 ```
 
 ## Author
