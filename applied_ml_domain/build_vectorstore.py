@@ -6,16 +6,16 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter #to make chu
 from langchain_community.vectorstores import FAISS #for search
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.documents import Document
-
+from pathlib import Path
 #Paper Extraction from folder
 all_documents = []
-
+BASE_DIR = Path(__file__).parent
 
 #Here we first use os module to find a given file in the papers folder,
 #Then we extract text from each page and combine them to get full text
 #Then we add the text of each pdf to all_documents along with file name
 #We add file name because we are going to need to display which paper was the content fetched from while answering 
-pdf_dir = "./papers"
+pdf_dir = BASE_DIR / "papers"
 
 
 for file in os.listdir(pdf_dir):
@@ -77,7 +77,7 @@ vectorstore = FAISS.from_documents(
 )
 #creating vectorstore folder to save vectors
 vectorstore.save_local(
-    "vectorstore"
+    str(BASE_DIR / "vectorstore")
 )
 
 #Verification of working of the code using a normal question

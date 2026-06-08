@@ -6,6 +6,9 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+from pathlib import Path
+
+
 #To safely load the APIKEY without leaking it
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
@@ -15,10 +18,13 @@ embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 #Load FAISS
+
+BASE_DIR = Path(__file__).parent
+
 vectorstore = FAISS.load_local(
-    "vectorstore",
+    str(BASE_DIR / "vectorstore"),
     embeddings,
-    allow_dangerous_deserialization=True #To prevent hacking
+    allow_dangerous_deserialization=True
 )
 #We use Gemini FLASH as the LLM
 llm = ChatGoogleGenerativeAI(
