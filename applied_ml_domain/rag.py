@@ -29,7 +29,8 @@ vectorstore = FAISS.load_local(
 #We use Gemini FLASH as the LLM
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash-lite",
-    google_api_key=api_key
+    google_api_key=api_key,
+    temperature=0.5
 )
 
 def answer_question(question):

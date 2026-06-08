@@ -1,9 +1,10 @@
 # SPML Task 1
 
-This repository contains solutions for both parts of SPML Task 1:
+This repository contains my solutions for all three parts of SPML Task 1:
 
-1. **Base Task** – Fashion-MNIST classification using a custom neural network implemented in PyTorch.
-2. **Applied ML Domain Task** – Research Paper RAG (Retrieval-Augmented Generation) chatbot built using LangChain, FAISS, Sentence Transformers, Gemini, and Streamlit.
+1. **Base Task** – Fashion-MNIST classification using a custom neural network in PyTorch.
+2. **Bonus Task** – MLP-based Autoencoder for image reconstruction and latent representation learning.
+3. **Applied ML Domain Task** – Research Paper RAG chatbot built using LangChain, FAISS, Sentence Transformers, Gemini, and Streamlit.
 
 ---
 
@@ -19,6 +20,12 @@ spider_ml_task_1/
 │   ├── requirements.txt
 │   └── README.md
 │
+├── bonus_task/
+│   ├── bonus_notebook.ipynb
+│   ├── requirements.txt
+│   ├── data/
+│   └── README.md
+│
 ├── applied_ml_domain/
 │   ├── app.py
 │   ├── rag.py
@@ -28,11 +35,11 @@ spider_ml_task_1/
 │   ├── Screenshots/
 │   ├── requirements.txt
 │   └── README.md
-├── .gitigonre
+│
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
-
 ---
 
 ## Base Task
@@ -53,7 +60,24 @@ Detailed documentation is available in:
 ```text
 base_task/Readme.md
 ```
+---
+## Bonus Task
 
+Implemented an MLP-based Autoencoder on the Fashion-MNIST dataset.
+
+**Highlights**
+
+* Encoder-decoder architecture using fully connected layers
+* Image reconstruction using MSE loss
+* Training and validation loss monitoring
+* Original vs reconstructed image comparison
+* Latent dimension analysis (8, 16, 32, 64, 128)
+
+Detailed documentation is available in:
+
+```text
+bonus_task/README.md
+```
 ---
 
 ## Applied ML Domain Task
